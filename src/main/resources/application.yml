@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: reactive-redis
+
+  r2dbc:
+    url: r2dbc:postgresql://postgres:5432/demo_db
+    username: demo
+    password: demo123
+
+  data:
+    redis:
+      host: redis
+      port: 6379
+
+  sql:
+    init:
+      mode: always
+
+logging:
+  level:
+    org.springframework.r2dbc: DEBUG
+    io.r2dbc.postgresql: DEBUG
+
+debug: true
